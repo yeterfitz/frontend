@@ -59,11 +59,13 @@ export default function Home({ drugs, drugCategories }) {
 }
 
 export const getStaticProps = async () => {
-  const drugsRes = await fetch(`http://localhost:10000/drugs`);
+  const drugsRes = await fetch(
+    `http://rxdrugs-backend-dev.us-east-1.elasticbeanstalk.com/drugs`
+  );
   const drugs = await drugsRes.json();
 
   const drugCategoriesRes = await fetch(
-    `http://localhost:10000/drugCategories`
+    `http://rxdrugs-backend-dev.us-east-1.elasticbeanstalk.com/drugCategories`
   );
   const drugCategories = await drugCategoriesRes.json();
 
