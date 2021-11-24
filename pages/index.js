@@ -31,8 +31,11 @@ export default function Home({ drugs, drugCategories }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="" />
+        <title>Prescription Drug Prices</title>
+        <meta
+          name="description"
+          content="Compare the prices of prescription drug prices"
+        />
         <link rel="icon" href="" />
       </Head>
 
@@ -47,7 +50,7 @@ export default function Home({ drugs, drugCategories }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
           `}
         </Script>
         <Filters
