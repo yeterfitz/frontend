@@ -14,12 +14,18 @@
   width: 75%;
 }
 
+.table_top_row {
+  display: flex;
+  align-items: center;
+}
+
 .table_filters {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 1rem;
   margin-top: 1rem;
+  flex: 1;
 }
 
 .search_filter {
@@ -29,4 +35,9 @@
 
 .category_filter {
   width: 360px;
+  margin-left: 1rem;
+}
+
+.button_link {
+  padding: 0 !important;
 }

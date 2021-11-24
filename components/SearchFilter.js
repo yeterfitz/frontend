@@ -42,6 +42,7 @@ export default function SearchFilter({
       onChange={searchFilterOnChange}
       value={searchFilter}
       maxLength={32}
+      placeholder="Search drug name"
     />
   );
 }

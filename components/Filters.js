@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import SearchFilter from "./SearchFilter";
-import { TreeSelect } from "antd";
+import { TreeSelect, Button } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
 
 export default function Filters({
   treeData,
@@ -45,24 +46,36 @@ export default function Filters({
   }, [categorySelected]);
 
   return (
-    <div className={styles.table_filters}>
-      <TreeSelect
-        dropdownStyle={{ maxHeight: 400, overflow: "auto" }}
-        placeholder="Filter by category"
-        treeData={treeData}
-        onChange={treeDataOnChange}
-        className={styles.category_filter}
-        value={categorySelected}
-        showSearch
-        allowClear
-      />
-      <SearchFilter
-        searchFilter={searchFilter}
-        setSearchFilter={setSearchFilter}
-        setDataSource={setDataSource}
-        filterCategory={filterCategory}
-        categoryDataCached={categoryDataCached}
-      ></SearchFilter>
+    <div className={styles.table_top_row}>
+      <Button
+        className={styles.button_link}
+        type="link"
+        href="/pdf/DrugPriceComparisonProject.pdf"
+        download
+      >
+        Download PDF
+      </Button>
+
+      <div className={styles.table_filters}>
+        <TreeSelect
+          dropdownStyle={{ maxHeight: 400, overflow: "auto" }}
+          placeholder="Filter by category"
+          treeData={treeData}
+          onChange={treeDataOnChange}
+          className={styles.category_filter}
+          value={categorySelected}
+          showSearch
+          allowClear
+          treeDefaultExpandAll
+        />
+        <SearchFilter
+          searchFilter={searchFilter}
+          setSearchFilter={setSearchFilter}
+          setDataSource={setDataSource}
+          filterCategory={filterCategory}
+          categoryDataCached={categoryDataCached}
+        ></SearchFilter>
+      </div>
     </div>
   );
 }

@@ -14,7 +14,7 @@ import Script from "next/script";
 export default function Home({ drugs, drugCategories }) {
   const [dataSource, setDataSource] = useState([]);
   const [treeData, setTreeData] = useState([]);
-  const [categorySelected, setCategorySelected] = useState("All");
+  const [categorySelected, setCategorySelected] = useState(undefined);
   const [categoryDataCached, setCategoryDataCached] = React.useState([]);
 
   const allData = useRef([]);
@@ -68,6 +68,9 @@ export default function Home({ drugs, drugCategories }) {
           columns={columns}
           title={() => categorySelected}
           scroll={{ x: "100%" }}
+          pagination={{
+            showSizeChanger: dataSource.length > 10 ? true : false,
+          }}
           bordered
         />
       </main>
@@ -76,14 +79,14 @@ export default function Home({ drugs, drugCategories }) {
 }
 
 export const getStaticProps = async () => {
-  const drugsRes = await fetch(
-    `http://rxdrugs-backend-dev.us-east-1.elasticbeanstalk.com/drugs`
-  );
+  const dev = process.env.NODE_ENV !== "production";
+  const endpoint = dev
+    ? `http://localhost:5000`
+    : `http://rxdrugs-backend-dev.us-east-1.elasticbeanstalk.com`;
+  const drugsRes = await fetch(endpoint + `/drugs`);
   const drugs = await drugsRes.json();
 
-  const drugCategoriesRes = await fetch(
-    `http://rxdrugs-backend-dev.us-east-1.elasticbeanstalk.com/drugCategories`
-  );
+  const drugCategoriesRes = await fetch(endpoint + `/drugCategories`);
   const drugCategories = await drugCategoriesRes.json();
 
   return {
