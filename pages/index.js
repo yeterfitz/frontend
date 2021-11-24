@@ -34,11 +34,14 @@ export default function Home({ drugs, drugCategories }) {
         <title>Create Next App</title>
         <meta name="description" content="" />
         <link rel="icon" href="" />
+      </Head>
+
+      <main className={styles.main}>
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-1P2ZEW1ZLM"
         ></Script>
-        <Script strategy="afterInteractive">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -47,9 +50,6 @@ export default function Home({ drugs, drugCategories }) {
           gtag('config', 'G-1P2ZEW1ZLM');
           `}
         </Script>
-      </Head>
-
-      <main className={styles.main}>
         <Filters
           treeData={treeData}
           allData={allData}
