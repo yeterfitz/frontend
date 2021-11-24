@@ -9,6 +9,7 @@ import {
 } from "../helper/datasource";
 import React, { useState, useEffect, useRef } from "react";
 import Filters from "../components/Filters";
+import Script from "next/script";
 
 export default function Home({ drugs, drugCategories }) {
   const [dataSource, setDataSource] = useState([]);
@@ -33,6 +34,19 @@ export default function Home({ drugs, drugCategories }) {
         <title>Create Next App</title>
         <meta name="description" content="" />
         <link rel="icon" href="" />
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-1P2ZEW1ZLM"
+        ></Script>
+        <Script strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-1P2ZEW1ZLM');
+          `}
+        </Script>
       </Head>
 
       <main className={styles.main}>
