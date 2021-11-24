@@ -39,7 +39,7 @@ export default function Home({ drugs, drugCategories }) {
       <main className={styles.main}>
         <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-1P2ZEW1ZLM"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         ></Script>
         <Script id="google-analytics" strategy="afterInteractive">
           {`
@@ -47,7 +47,7 @@ export default function Home({ drugs, drugCategories }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-1P2ZEW1ZLM');
+          gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
           `}
         </Script>
         <Filters
