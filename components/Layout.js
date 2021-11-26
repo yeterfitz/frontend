@@ -67,7 +67,9 @@ export default function Layout({ children }) {
           <Menu.Item key="/prices">
             <Link href="/prices">Drug Prices</Link>
           </Menu.Item>
-          {/* <Menu.Item key="/contact">Contact Us</Menu.Item> */}
+          <Menu.Item key="/contact">
+            <Link href="/contact">Contact Us</Link>
+          </Menu.Item>
         </Menu>
       </div>
       <main className={styles.main}>
