@@ -109,21 +109,21 @@ export default function Usage() {
               mean 60 tablets.
             </Text>
             <Text>
-              <strong>Generic Cost:</strong> This is the retail drug price as
+              <strong>Generic Price:</strong> This is the retail drug price as
               per the NIPDF and all pharmacies in the province must sell the
               generic products (if it is in the NIPDF) at this price. It does
               not include the dispensing fee.
             </Text>
             <Text>
-              <strong>Branded Cost:</strong> This is the approximate price of
+              <strong>Branded Price:</strong> This is the approximate price of
               branded drugs. As pharmacies can set any mark up for these
               medications, the actual cost the patient pays will likely be
               higher and will differ between pharmacies. The cost listed here is
               obtained from NIDPF/NLPDP.
             </Text>
             <Text>
-              <strong>Status:</strong> This column indicates whether the drug is
-              covered by the NLPDP. If listed as Open, then NLPDP covers the
+              <strong>Coverage:</strong> This column indicates whether the drug
+              is covered by the NLPDP. If listed as Open, then NLPDP covers the
               drug and generally with minimal or no restrictions. If ‘SA’, then
               the NLPDP requires prior special authorization for the drug to be
               completed by a physician. If using the electronic version of this

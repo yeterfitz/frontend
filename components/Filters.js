@@ -48,9 +48,9 @@ export default function Filters({
   return (
     <div className={styles.table_top_row}>
       <Button
-        className={styles.button_link}
-        type="link"
+        type="primary"
         href="/pdf/DrugPriceComparisonProject.pdf"
+        icon={<DownloadOutlined />}
         download
       >
         Download PDF
