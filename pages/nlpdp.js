@@ -126,6 +126,7 @@ export default function NLPDP() {
               <a
                 href="https://www.gov.nl.ca/hcs/prescription/nlpdp-plan-overview/"
                 target="_blank"
+                rel="noreferrer"
               >
                 https://www.gov.nl.ca/hcs/prescription/nlpdp-plan-overview/
               </a>

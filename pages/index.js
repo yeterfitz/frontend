@@ -103,6 +103,7 @@ export default function Home() {
               <a
                 href="https://acfp.ca/wp-content/uploads/2019/02/ACFPPricingDoc2019.pdf"
                 target="_blank"
+                rel="noreferrer"
               >
                 https://acfp.ca/wp-content/uploads/2019/02/ACFPPricingDoc2019.pdf
               </a>
@@ -114,6 +115,7 @@ export default function Home() {
               <a
                 href="https://www.statcan.gc.ca/pub/82-003-x/2014006/article/14032-eng.htm"
                 target="_blank"
+                rel="noreferrer"
               >
                 https://www.statcan.gc.ca/pub/82-003-x/2014006/article/14032-eng.htm
               </a>
@@ -125,6 +127,7 @@ export default function Home() {
               <a
                 href="https://www.cihi.ca/sites/default/files/document/pdex-report-2018-en-web.pdf"
                 target="_blank"
+                rel="noreferrer"
               >
                 https://www.cihi.ca/sites/default/files/document/pdex-report-2018-en-web.pdf
               </a>
@@ -144,6 +147,7 @@ export default function Home() {
               <a
                 href="https://www150.statcan.gc.ca/n1/pub/82-003-x/2016006/article/14634-eng.htm"
                 target="_blank"
+                rel="noreferrer"
               >
                 https://www150.statcan.gc.ca/n1/pub/82-003-x/2016006/article/14634-eng.htm
               </a>
@@ -161,8 +165,8 @@ export default function Home() {
               11, 2021
             </Text>
             <Text style={{ fontSize: "12px" }}>
-              <sup>8</sup> Reichert S, Simon T, Halm EA. Physicians' attitudes
-              about prescribing and knowledge of the costs of common
+              <sup>8</sup> Reichert S, Simon T, Halm EA. Physicians&apos;
+              attitudes about prescribing and knowledge of the costs of common
               medications. Arch Intern Med. 2000;160(18):2799-2803.
               doi:10.1001/archinte.160.18.2799
             </Text>
@@ -182,7 +186,11 @@ export default function Home() {
               physicians to prescribe more cost-effectively: Blueprint for
               change. Can Fam Physician. 2020;66(10):723-725. Accessed November
               15, 2021.{" "}
-              <a href="https://www.cfp.ca/content/66/10/723" target="_blank">
+              <a
+                href="https://www.cfp.ca/content/66/10/723"
+                target="_blank"
+                rel="noreferrer"
+              >
                 https://www.cfp.ca/content/66/10/723
               </a>
             </Text>
@@ -191,7 +199,11 @@ export default function Home() {
               prescribing on national health care spending. More than half a
               billion dollars in annual savings. Can Fam Physician.
               2016;62:235-44. (Eng), e146–56 (Fr). Accessed November 15, 2021.{" "}
-              <a href="https://www.cfp.ca/content/62/3/235" target="_blank">
+              <a
+                href="https://www.cfp.ca/content/62/3/235"
+                target="_blank"
+                rel="noreferrer"
+              >
                 https://www.cfp.ca/content/62/3/235
               </a>
             </Text>

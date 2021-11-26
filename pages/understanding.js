@@ -116,6 +116,7 @@ export default function Understanding() {
               <a
                 href="http://pmprbcepmb.gc.ca/about-us/frequently-asked-questions#1391"
                 target="_blank"
+                rel="noreferrer"
               >
                 http://pmprbcepmb.gc.ca/about-us/frequently-asked-questions#1391
               </a>
@@ -126,6 +127,7 @@ export default function Understanding() {
               <a
                 href="https://www.pcpacanada.ca/generic-drug-framework"
                 target="_blank"
+                rel="noreferrer"
               >
                 https://www.pcpacanada.ca/generic-drug-framework
               </a>
