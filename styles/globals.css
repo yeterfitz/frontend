@@ -1,5 +1,12 @@
-html,
+html {
+  height: 100%;
+}
 body {
+  height: inherit;
   padding: 0;
   margin: 0;
+}
+
+div#__next {
+  height: inherit;
 }

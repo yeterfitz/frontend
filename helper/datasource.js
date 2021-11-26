@@ -1,3 +1,31 @@
+import { Tag } from "antd";
+
+const dosingColorMap = {
+  QD: "#ffa39e",
+  QID: "#ffbb96",
+  BID: "#d3adf7",
+  TID: "#ffd591",
+  PRN: "#eaff8f",
+  Q1weekly: "#b7eb8f",
+  Q2weekly: "#b7eb8f",
+  Q4weekly: "#b7eb8f",
+  Q1monthly: "#91d5ff",
+  Q3monthly: "#91d5ff",
+  Q6monthly: "#91d5ff",
+  Q5yearly: "#87e8de",
+  Once: "#adc6ff",
+  "Single dose": "#adc6ff",
+  Annual: "#ffe58f",
+  "2x/week": "#ffadd2",
+  "N/A": "",
+};
+
+const coverageColorMap = {
+  Open: "success",
+  SA: "processing",
+  "N/A": "",
+};
+
 export const columns = [
   {
     title: "Generic Name",
@@ -18,6 +46,7 @@ export const columns = [
     title: "Dosing",
     dataIndex: "dosing",
     key: "dosing",
+    // render: (dosing) => <Tag color={dosingColorMap[dosing]}>{dosing}</Tag>,
   },
   {
     title: "Quantity",
@@ -38,6 +67,9 @@ export const columns = [
     title: "Coverage",
     dataIndex: "coverage",
     key: "coverage",
+    // render: (coverage) => (
+    //   <Tag color={coverageColorMap[coverage]}>{coverage}</Tag>
+    // ),
   },
 ];
 
@@ -51,8 +83,8 @@ export const organizeRawData = (rawData) => {
       strength: rd.strength,
       dosing: rd.dosing_name,
       quantity: rd.quantity,
-      generic_price: rd.generic_price,
-      branded_price: rd.branded_price,
+      generic_price: "$" + rd.generic_price,
+      branded_price: "$" + rd.branded_price,
       coverage: rd.coverage_name,
       main_category: rd.main_category,
       sub_category_1: rd.sub_category_1,
